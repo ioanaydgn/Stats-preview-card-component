@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+/*
+font-family: 'Inter', sans-serif;
+font-family: 'Lexend Deca', sans-serif;
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter',sans-serif;
+    min-height: 100vh;
+    background: hsl(233, 47%, 7%);
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+}
+
+.container {
+    max-width: 1020px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    background-color: hsl(244, 38%, 16%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 2rem;
+}
+
+.img-component img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-component {
+    position: relative;
+}
+
+.img-component::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: hsl(277,64%,61%);
+    opacity: 0.6;
+}
+
+.text-component {
+    padding: 13%;
+}
+
+.title {
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    padding-bottom: 22px;
+}
+
+.title span {
+    color: hsl(277, 64%, 61%);
+}
+
+.subtitle {
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.8;
+}
+
+.stat-box {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    padding-top: 60px;
+}
+
+.stat-box p.num {
+    color: hsl(0, 0%, 100%);
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.stat-box p {
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+@media only screen and (max-width: 768px) and (min-width: 426px) {
+    body {
+        font-size: 12px;
+    }
+
+    .text-component {
+        padding: 12%;
+    }
+
+    .title {
+        font-size: 22px;
+    }
+
+    .stat-box {
+        padding-top: 30px;
+    }
+
+    .stat-box p.num {
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    body {
+        text-align: center;
+    }
+
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .img-component {
+        order: -1;
+    }
+
+    .text-component {
+        padding: 12% 8%;
+    }
+
+    .title {
+        font-size: 23px;
+        line-height: 1.4;
+    }
+
+    .stat-box {
+        flex-direction: column;
+        padding-top: 30px;
+    }
+
+    .stat-box div {
+        margin-top: 20px;
+    }
+}
